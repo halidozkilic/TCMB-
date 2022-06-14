@@ -48,6 +48,7 @@ async function getCurrencies() {
 
         let dif = ((years[i][k].ForexBuying._text - years[i + 1][k].ForexBuying._text) / years[i][k].ForexBuying._text) * 100;
         if (dif > max && years[i][k]._attributes.CurrencyCode !== 'XDR') {
+          max = dif;
           temp.rate = dif;
           temp.code = years[i][k]._attributes.CurrencyCode;
           temp.name = years[i][k].CurrencyName._text;
@@ -56,8 +57,10 @@ async function getCurrencies() {
     }
     const data = yyyy - i;
     result[data] = temp;
+    temp = {};
+    max = 0;
   }
-  console.log(result[2020]);
+  console.log(result);
 }
 
 getCurrencies()
