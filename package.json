@@ -1,0 +1,16 @@
+{
+  "name": "nisa",
+  "version": "1.0.0",
+  "description": "vv",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "xml-js": "^1.6.11"
+  }
+}
